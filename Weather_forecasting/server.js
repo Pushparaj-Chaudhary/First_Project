@@ -3,6 +3,9 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+app.get('/api/health', (req, res) => {
+  res.send('Server is alive');
+});
 const PORT = process.env.PORT || 3000;
 
 // Middleware
